@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -7,7 +6,9 @@ import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.components";
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utilis";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor() {
@@ -33,7 +34,7 @@ class App extends React.Component {
           });
         });
       }
-      this.setState({currentUser: userAuth });
+      this.setState({ currentUser: userAuth });
     });
   }
 
